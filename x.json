@@ -1,0 +1,71 @@
+{
+  "ruleModelId": "1",
+  "ruleId": "rule001",
+  "profileCondition": [
+    {
+      "tagId": "tg01",
+      "compareType": "gt",
+      "compareValue": "3"
+    },
+    {
+      "tagId": "tg04",
+      "compareType": "match",
+      "compareValue": "汽车"
+    }
+  ],
+  "actionCountCondition": {
+    "eventParams": [
+      {
+        "eventId": "e1",
+        "attributeParams": [
+          {
+            "attributeName": "pageId",
+            "compareType": "=",
+            "compareValue": "page001"
+          }
+        ],
+        "windowStart": "2022-08-01 12:00:00",
+        "windowEnd": "2022-08-30 12:00:00",
+        "eventCount": 3,
+        "conditionId": 1,
+        "dorisQueryTemplate": "action_count"
+      },
+      {
+        "eventId": "e3",
+        "attributeParams": [
+          {
+            "attributeName": "pageId",
+            "compareType": "=",
+            "compareValue": "page002"
+          },
+          {
+            "attributeName": "itemId",
+            "compareType": "=",
+            "compareValue": "item003"
+          }
+        ],
+        "windowStart": "2022-08-01 12:00:00",
+        "windowEnd": "2022-08-30 12:00:00",
+        "eventCount": 1,
+        "conditionId": 2,
+        "dorisQueryTemplate": "action_count"
+      },
+      {
+        "eventId": "e2",
+        "attributeParams": [
+          {
+            "attributeName": "pageId",
+            "compareType": "=",
+            "compareValue": "page001"
+          }
+        ],
+        "windowStart": "2022-08-01 12:00:00",
+        "windowEnd": "2022-08-30 12:00:00",
+        "eventCount": 2,
+        "conditionId": 3,
+        "dorisQueryTemplate": "action_count"
+      }
+    ],
+    "combineExpr": " res0 && (res1 || res2) "
+  }
+}

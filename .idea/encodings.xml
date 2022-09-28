@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/data-collector/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-collector/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-etl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-etl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-export/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dw/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dw/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-marketing-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-marketing-engine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-marketing-engine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-marketing-manger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-marketing-manger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rule_model_resources/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rule_model_resources/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tech-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tech-test/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

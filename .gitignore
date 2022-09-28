@@ -1,0 +1,5 @@
+# Project exclude paths
+/data-export/target/
+/realtime-marketing-common/target/
+/realtime-marketing-engine/target/
+/rule_model_resources/target/

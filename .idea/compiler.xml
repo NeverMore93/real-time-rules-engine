@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="data-collector" />
+        <module name="tech-test" />
+        <module name="realtime-marketing-common" />
+        <module name="data-export" />
+        <module name="realtime-marketing" />
+        <module name="realtime-dw" />
+        <module name="rule_model_resources" />
+        <module name="data-etl" />
+        <module name="realtime-marketing-manger" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="realtime-marketing-manger" options="-parameters" />
+    </option>
+  </component>
+</project>

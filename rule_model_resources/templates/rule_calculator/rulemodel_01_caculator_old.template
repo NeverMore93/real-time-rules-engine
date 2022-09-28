@@ -1,0 +1,109 @@
+package cn.doitedu.rtmk.rulemodel.caculator.groovy
+
+import cn.doitedu.rtmk.common.interfaces.RuleCalculator
+import cn.doitedu.rtmk.common.pojo.UserEvent
+import com.alibaba.fastjson.JSONArray
+import com.alibaba.fastjson.JSONObject
+import redis.clients.jedis.Jedis
+
+public class EventCountConditionCalculatorGroovy implements RuleCalculator {
+
+    private Jedis jedis;
+    private JSONObject ruleDefineParamJsonObject;
+    private JSONObject eventCountConditionParam;
+    private String ruleId;
+
+    @Override
+    public void init(Jedis jedis, JSONObject ruleDefineParamJsonObject) {
+        this.jedis = jedis;
+        this.ruleDefineParamJsonObject = ruleDefineParamJsonObject;
+
+        ruleId = ruleDefineParamJsonObject.getString("ruleId");
+
+        this.eventCountConditionParam = ruleDefineParamJsonObject.getJSONObject("actionCountCondition");
+
+    }
+
+    @Override
+    public void calc(UserEvent userEvent) {
+
+        JSONArray eventParams = eventCountConditionParam.getJSONArray("eventParams");
+        int size = eventParams.size();
+
+        for (int i = 0; i < size; i++) {
+
+            JSONObject eventParam = eventParams.getJSONObject(i);
+
+            Integer conditionId = eventParam.getInteger("conditionId");
+
+            if (userEvent.getEventId().equals(eventParam.getString("eventId"))) {
+
+                JSONArray attributeParams = eventParam.getJSONArray("attributeParams");
+                boolean b = judgeEventAttribute(userEvent, attributeParams);
+
+                if (b) {
+                    jedis.hincrBy(ruleId + ":" + conditionId, userEvent.getGuid() + "", 1);
+                }
+            }
+        }
+
+
+    }
+
+
+    @Override
+    public boolean isMatch(int guid) {
+        JSONArray eventParams = eventCountConditionParam.getJSONArray("eventParams");
+
+
+        #for(eventParam : eventParams)
+        JSONObject eventParam_#(for.index) = eventParams.getJSONObject(#(for.index));
+        Integer conditionId_#(for.index) = eventParam_#(for.index).getInteger("conditionId");
+
+        Integer eventCountParam_#(for.index) = eventParam_#(for.index).getInteger("eventCount");
+
+        String realCountStr_#(for.index) = jedis.hget(ruleId + ":" + conditionId_#(for.index), guid + "");
+        int realCount_#(for.index) = Integer.parseInt(realCountStr_#(for.index) == null ? "0" : realCountStr_#(for.index));
+
+        boolean res_#(for.index) = realCount_#(for.index) >= eventCountParam_#(for.index) ;
+
+        #end
+        return  #(combineExpr);
+    }
+
+    private boolean judgeEventAttribute(UserEvent userEvent, JSONArray attributeParams) {
+        for (int j = 0; j < attributeParams.size(); j++) {
+            JSONObject attributeParam = attributeParams.getJSONObject(j);
+
+            String paramAttributeName = attributeParam.getString("attributeName");
+            String paramCompareType = attributeParam.getString("compareType");
+            String paramValue = attributeParam.getString("compareValue");
+
+            String eventAttributeValue = userEvent.getProperties().get(paramAttributeName);
+
+            if ("=" == paramCompareType && !(paramValue == eventAttributeValue)) {
+                return false;
+            }
+
+            if (">" == paramCompareType && !(paramValue > eventAttributeValue)) {
+                return false;
+            }
+
+            if ("<" == paramCompareType && !(paramValue < eventAttributeValue)) {
+                return false;
+            }
+
+            if ("<=" == paramCompareType && !(paramValue <= eventAttributeValue)) {
+                return false;
+            }
+
+            if (">=" == paramCompareType && !(paramValue >= eventAttributeValue)) {
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+
+}
