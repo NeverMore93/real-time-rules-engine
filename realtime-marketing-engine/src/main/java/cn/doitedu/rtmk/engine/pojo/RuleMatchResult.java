@@ -5,10 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/20
  * @Desc: 封装规则触达结果的javabean
  **/
 

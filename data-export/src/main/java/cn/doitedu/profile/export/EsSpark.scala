@@ -4,10 +4,6 @@ import org.apache.spark.{SparkConf, SparkContext}
 import org.elasticsearch.spark._
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/13
  * @Desc:  spark写入数据到es，简单示例
 
 

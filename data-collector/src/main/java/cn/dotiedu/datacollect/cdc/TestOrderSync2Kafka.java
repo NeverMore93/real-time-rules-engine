@@ -7,10 +7,6 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/7/31
  * @Desc: 业务库 ，订单表 ，同步到kafka
  *
  * 测试环境准备：  mysql中要创建一个测试的订单表：

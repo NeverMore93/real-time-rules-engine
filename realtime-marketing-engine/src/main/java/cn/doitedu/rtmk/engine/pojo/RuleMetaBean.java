@@ -8,11 +8,6 @@ import lombok.NoArgsConstructor;
 import org.roaringbitmap.RoaringBitmap;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/20
- * @Desc:
  *
  * CREATE TABLE `rule_instance_definition` (
  *   `id` int(11) NOT NULL AUTO_INCREMENT,

@@ -25,10 +25,6 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/16
  * @Desc: 从socket读取用户的实时的行为事件
  *        并从外部（规则管理平台的mysql源数据库）注入规则及规则对应的人群bitmap，对输入的行为事件进行规则处理
  **/

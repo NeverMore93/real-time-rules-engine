@@ -9,10 +9,6 @@ import java.io.IOException;
 import java.sql.*;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/16
  * @Desc:  模拟规则发布平台，并测试其人群bitmap生成及发布功能
  **/
 public class _01_RulePublisher {

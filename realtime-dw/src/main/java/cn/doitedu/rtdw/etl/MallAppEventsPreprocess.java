@@ -31,10 +31,6 @@ import org.apache.flink.util.OutputTag;
 import java.util.Map;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/10
  * @Desc: 商城用户行为日志预处理
  **/
 public class MallAppEventsPreprocess {

@@ -7,10 +7,6 @@ import org.roaringbitmap.RoaringBitmap;
 import java.util.List;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/19
  * @Desc: 规则运算机的统一接口
  **/
 public interface RuleCalculator {

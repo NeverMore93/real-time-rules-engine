@@ -8,10 +8,6 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/16
  * @Desc:  模拟测试规则发布平台的工作流程
  **/
 public class SimpleRulePulishMoni {

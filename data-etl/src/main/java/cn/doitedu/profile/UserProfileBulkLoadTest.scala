@@ -14,10 +14,6 @@
 //
 //
 ///**
-// * @Author: deep as the sea
-// * @Site: <a href="www.51doit.com">多易教育</a>
-// * @QQ: 657270652
-// * @Date: 2022/8/4
 // * @Desc: 画像数据，用bulkload导入hbase ，测试
 // *
 // *

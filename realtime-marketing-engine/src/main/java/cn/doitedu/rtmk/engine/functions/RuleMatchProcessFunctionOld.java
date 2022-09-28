@@ -23,10 +23,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/20
  * @Desc: 规则运算、匹配的核心计算函数
  **/
 @Slf4j

@@ -118,7 +118,7 @@ public class RuleManagementController {
          */
 
         Integer ruleModelId = ruleDefineJsonObject.getInteger("ruleModelId");
-        String creatorName = "多易教育@深似海男人";
+        String creatorName = "ai-smalleryu";
 
         ruleSystemMetaService.publishRuleInstance(ruleId,ruleModelId,creatorName,1,bitmap,ruleDefineJson,groovyCaculatorCode);
 
@@ -230,7 +230,7 @@ public class RuleManagementController {
          */
 
         Integer ruleModelId = ruleDefineJsonObject.getInteger("ruleModelId");
-        String creatorName = "多易教育@深似海男人";
+        String creatorName = "ai-smalleryu";
 
         ruleSystemMetaService.publishRuleInstance(ruleId,ruleModelId,creatorName,1,bitmap,ruleDefineJson,groovyCaculatorCode);
 
@@ -261,7 +261,7 @@ public class RuleManagementController {
          */
 
         Integer ruleModelId = ruleDefineJsonObject.getInteger("ruleModelId");
-        String creatorName = "多易教育@深似海男人";
+        String creatorName = "ai-smalleryu";
 
         ruleSystemMetaService.publishRuleInstance(ruleId,ruleModelId,creatorName,1,null,ruleDefineJson,groovyCode);
 

@@ -4,10 +4,6 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/11
  * @Desc:  - 最近10分钟的pv流量，uv量，会话数， 每1分钟更新一次
  **/
 public class MallAppTrafficReport2 {

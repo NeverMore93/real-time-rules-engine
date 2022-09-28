@@ -8,10 +8,6 @@ import org.roaringbitmap.RoaringBitmap;
 import java.io.*;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/12
  * @Desc: 用户flink-kafka连接器的bitmap序列化器
  **/
 public class BitmapSchema implements DeserializationSchema<RoaringBitmap>, SerializationSchema<RoaringBitmap> {

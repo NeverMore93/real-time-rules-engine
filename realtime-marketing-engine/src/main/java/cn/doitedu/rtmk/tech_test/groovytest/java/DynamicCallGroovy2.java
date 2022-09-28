@@ -5,10 +5,6 @@ import groovy.lang.GroovyClassLoader;
 import java.sql.*;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/16
  * @Desc: groovy代码动态调用示例2
  **/
 public class DynamicCallGroovy2 {

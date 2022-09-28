@@ -5,10 +5,6 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/7/31
  * @Desc: flink-cdc 捕获 mysql变更数据测试代码
  **/
 public class FlinkCdcTest {

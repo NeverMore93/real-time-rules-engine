@@ -6,11 +6,6 @@ import org.roaringbitmap.RoaringBitmap
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream, DataInputStream, DataOutputStream}
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/7/26
- * @Desc:
  * 将数仓中已经存在的用户活跃情况，生成一个活跃bitmap记录表的初始状态
  * -- 从 活跃区间记录表 来处理
  *

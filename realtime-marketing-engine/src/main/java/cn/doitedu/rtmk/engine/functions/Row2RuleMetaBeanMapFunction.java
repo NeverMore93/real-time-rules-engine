@@ -11,11 +11,6 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 
 /**
- * @Author: deep as the sea
- * @Site: <a href="www.51doit.com">多易教育</a>
- * @QQ: 657270652
- * @Date: 2022/8/20
- * @Desc:
  *
  *   `id` int(11) NOT NULL AUTO_INCREMENT,
  *   `rule_id` varchar(50) DEFAULT NULL,
