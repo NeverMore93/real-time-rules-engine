@@ -61,10 +61,10 @@ public class TestOrderSync2Kafka {
                 "     PRIMARY KEY (id) NOT ENFORCED                  " +
                 "     ) WITH (                                       " +
                 "     'connector' = 'mysql-cdc',      " +
-                "     'hostname' = 'doitedu'   ,      " +
-                "     'port' = '3306'          ,      " +
+                "     'hostname' = 'localhost'   ,      " +
+                "     'port' = '53307'          ,      " +
                 "     'username' = 'root'      ,      " +
-                "     'password' = 'root'      ,      " +
+                "     'password' = 'example'      ,      " +
                 "     'database-name' = 'flinktest',  " +
                 "     'table-name' = 'test_order'    " +
                 ")");

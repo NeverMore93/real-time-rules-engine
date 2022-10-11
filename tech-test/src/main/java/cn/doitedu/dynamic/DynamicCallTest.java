@@ -15,7 +15,7 @@ public class DynamicCallTest {
         System.out.println("我要调一个工具来做加法");
 
 
-        Connection conn = DriverManager.getConnection("jdbc:mysql://doitedu:3306/rtmk", "root", "root");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:53307/rtmk", "root", "example");
         Statement stmt = conn.createStatement();
 
 

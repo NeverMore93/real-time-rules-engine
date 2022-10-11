@@ -42,7 +42,7 @@ public class MallAppEventsPreprocess {
          */
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.enableCheckpointing(2000, CheckpointingMode.EXACTLY_ONCE);
-        env.getCheckpointConfig().setCheckpointStorage("file:/d:/checkpoint");
+        //env.getCheckpointConfig().setCheckpointStorage("file:/d:/checkpoint");
         env.setParallelism(1);
 
 
@@ -56,7 +56,7 @@ public class MallAppEventsPreprocess {
 
         // 从kafka读入商城用户行为日志
         KafkaSource<String> source = KafkaSource.<String>builder()
-                .setBootstrapServers("doitedu:9092")
+                .setBootstrapServers("localhost:59092")
                 .setStartingOffsets(OffsetsInitializer.latest())
                 .setGroupId("doe-01")
                 .setValueOnlyDeserializer(new SimpleStringSchema())
